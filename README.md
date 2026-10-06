@@ -7,3 +7,5 @@
 Web previews use Godot 4.6.3 single-thread exports. The first load downloads approximately 320 MiB. Some symbol icons may render as squares; mobile performance is still being evaluated.
 
 To publish or roll back a Web preview, upload `battle-tendency-web.zip` to a Release, then run **Actions → Deploy Web to GitHub Pages** with that Release tag. The ZIP must contain `index.html`, `index.pck`, and `index.wasm` at its root.
+
+Multipart uploads are also supported: split the ZIP into consecutively numbered files named `battle-tendency-web.zip.part000`, `.part001`, etc. The deployment workflow joins them before extracting.
