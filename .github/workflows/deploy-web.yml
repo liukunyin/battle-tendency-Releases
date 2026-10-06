@@ -25,7 +25,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ inputs.release_tag }}
         run: |
-          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern battle-tendency-web.zip
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern 'battle-tendency-web.zip*'
+          if [ ! -f battle-tendency-web.zip ]; then
+            cat battle-tendency-web.zip.part* > battle-tendency-web.zip
+          fi
           mkdir web
           unzip -q battle-tendency-web.zip -d web
           test -f web/index.html
