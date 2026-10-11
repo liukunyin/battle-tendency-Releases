@@ -2,12 +2,13 @@ name: Publish Web game
 on:
   workflow_dispatch:
     inputs:
-      release_tag:
-        description: Release containing the Web zip
+      base_run:
+        description: Successful Pages run containing the deployed game files
         required: true
-        default: v0.3
+        default: '38139850069'
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 concurrency:
@@ -21,19 +22,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/configure-pages@v5
-      - name: Download release Web export
+      - uses: actions/checkout@v4
+      - name: Restore deployed game and apply Web fix
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ inputs.release_tag }}
+          BASE_RUN: ${{ inputs.base_run }}
           RELEASE_REPO: ${{ github.repository }}
         run: |
-          mkdir dist
-          gh release download "$RELEASE_TAG" --repo "$RELEASE_REPO" --pattern '*-web.zip' --pattern SHA256SUMS.txt --dir dist
-          cd dist
-          sha256sum --check --ignore-missing SHA256SUMS.txt
-          unzip -q '*-web.zip' -d ../_site
-          test -f ../_site/index.html
-          test -f ../_site/sw.js
+          mkdir _site dist
+          gh run download "$BASE_RUN" --repo "$RELEASE_REPO" --name github-pages --dir dist
+          tar -xf dist/artifact.tar -C _site
+          cp web/sw.js _site/sw.js
+          test -f _site/index.html
+          test -f _site/sw.js
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
