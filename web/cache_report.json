@@ -1,5 +1,5 @@
 {
-  "version": "440844e1a150309ffe7c",
+  "version": "78215f9b8810ec3ce20a",
   "startup": [
     "bt-dfe489ec1f2e64105d77.audio.position.worklet.js",
     "bt-dfe489ec1f2e64105d77.audio.worklet.js",
@@ -82,5 +82,6 @@
     "index.html",
     "index.icon.png",
     "index.png"
-  ]
+  ],
+  "forceUpdate": true
 }
