@@ -1,0 +1,3 @@
+
+# Preserve exact exported bytes; cache artifacts are content-addressed.
+web/** -text
