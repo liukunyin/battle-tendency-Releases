@@ -4,6 +4,15 @@
 (() => {
     const outputs = new WeakMap();
     window.battleTendencyInstallAudioCacheCleanup = (audio) => {
+        // Samples are immutable after registration. BufferSource nodes may share
+        // one decoded AudioBuffer; playback rate, offset and loop state live on
+        // each source, not in the PCM data. Avoid two full PCM copies per play.
+        if (audio.Sample && audio.Sample.prototype) {
+            audio.Sample.prototype.getAudioBuffer = function () {
+                if (this._audioBuffer == null) throw new Error('Sample audio buffer was cleared');
+                return this._audioBuffer;
+            };
+        }
         // The pinned template can deliver an ended event from an older source
         // after pause/restart or disposal. That source no longer owns this voice.
         const addEndedListener = audio.SampleNode.prototype._addEndedListener;
