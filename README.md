@@ -2,7 +2,7 @@
 
 **跨作品角色对战游戏 · Crossover character battles**
 
-[在线试玩 / Play online](https://liukunyin.github.io/battle-tendency-Releases/) · [下载最新版 / Download](https://github.com/liukunyin/battle-tendency-Releases/releases/latest) · [版本记录 / Changelog](https://github.com/liukunyin/battle-tendency-Releases/releases)
+[在线试玩 / Play online](https://liukunyin.github.io/battle-tendency-Releases/) · [下载最新版 / Download](https://github.com/liukunyin/battle-tendency-Releases/releases/latest) · [版本记录 / Changelog](https://github.com/liukunyin/battle-tendency-Releases/releases) · [B站 Toy 试玩版 / Bilibili Toy demo](https://www.bilibili.com/toy/battle-tendency/index.html)
 
 ## 中文
 
@@ -23,6 +23,7 @@
 | 平台 | 入口 | 使用方式 |
 | --- | --- | --- |
 | 网页 | [在线试玩](https://liukunyin.github.io/battle-tendency-Releases/) | 打开浏览器即可游玩，无需安装 |
+| B站 Toy | [试玩版](https://www.bilibili.com/toy/battle-tendency/index.html) | 在 B站体验试玩版 |
 | Windows x64 | [下载安装包](https://github.com/liukunyin/battle-tendency-Releases/releases/latest) | 下载 `.exe` 文件后运行 |
 | Android arm64 | [下载安装包](https://github.com/liukunyin/battle-tendency-Releases/releases/latest) | 下载 `.apk` 文件并安装 |
 
@@ -60,6 +61,7 @@ Version **0.3** features **64 fighters**, including characters from *JoJo's Biza
 | Platform | Link | How to play |
 | --- | --- | --- |
 | Web | [Play online](https://liukunyin.github.io/battle-tendency-Releases/) | Open in your browser; no installation needed |
+| Bilibili Toy | [Play the demo](https://www.bilibili.com/toy/battle-tendency/index.html) | Try the demo on Bilibili |
 | Windows x64 | [Download](https://github.com/liukunyin/battle-tendency-Releases/releases/latest) | Download and run the `.exe` file |
 | Android arm64 | [Download](https://github.com/liukunyin/battle-tendency-Releases/releases/latest) | Download and install the `.apk` file |
 
