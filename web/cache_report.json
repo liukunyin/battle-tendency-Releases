@@ -1,11 +1,11 @@
 {
-  "version": "6ea0be50f297bcfd83b7",
+  "version": "e756087195deebb1db6c",
   "startup": [
-    "bt-5cab6de1648618efb376.audio.position.worklet.js",
-    "bt-5cab6de1648618efb376.audio.worklet.js",
-    "bt-5cab6de1648618efb376.js",
-    "bt-5cab6de1648618efb376.pck",
-    "bt-5cab6de1648618efb376.wasm",
+    "bt-a56839656f5992c9565c.audio.position.worklet.js",
+    "bt-a56839656f5992c9565c.audio.worklet.js",
+    "bt-a56839656f5992c9565c.js",
+    "bt-a56839656f5992c9565c.pck",
+    "bt-a56839656f5992c9565c.wasm",
     "index.apple-touch-icon.png",
     "index.html",
     "index.icon.png",
@@ -75,9 +75,9 @@
     "packs/weather_report-26501cef7ee51b9c.pck"
   ],
   "shell": [
-    "bt-5cab6de1648618efb376.audio.position.worklet.js",
-    "bt-5cab6de1648618efb376.audio.worklet.js",
-    "bt-5cab6de1648618efb376.js",
+    "bt-a56839656f5992c9565c.audio.position.worklet.js",
+    "bt-a56839656f5992c9565c.audio.worklet.js",
+    "bt-a56839656f5992c9565c.js",
     "index.apple-touch-icon.png",
     "index.html",
     "index.icon.png",
