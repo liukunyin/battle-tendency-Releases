@@ -5,7 +5,7 @@
     "branch": "main",
     "root": "D:\\Godot\\project\\battle-tendency\\dev\\local\\main-release",
     "version": "main",
-    "head": "8515a754e4cf30913591778fc0c0f85482845f90",
+    "head": "da851276ea7835f94a939fa1e1d9f3c8c3ed2232",
     "files": {
       "assets/characters/abdul/crossfire.mp3": "cfe28da3a9c9f4d6d97472c492b82020ca71a002de63654f0a27cb6620dad152",
       "assets/characters/abdul/crossfire.mp3.import": "4b9643c9f02fc8e4a22bbb5efa92848c2db294f8f3f11acdcea54c4701f4e329",
@@ -1556,7 +1556,7 @@
       "assets/shared/audio/sfx/vehicle_ignition.wav.import": "b3c978b5fc892ea95c4b2707b4da9988549e9887719603c6879624b72b087ba1",
       "assets/shared/audio/sfx/wall_bounce.mp3": "7e761c8637a0fea116c1b8fd1152feaa7a3de2c8326028b1d985b663da2f19fc",
       "assets/shared/audio/sfx/wall_bounce.mp3.import": "93a56c93d9ac84292e785178ef695835123133c36c338cd96b448dec88facbba",
-      "assets/shared/fonts/NotoSansSC-Subset.ttf": "a02fc1bd2fb48e96221e74a1e08779ea23f09e3b5fbbb4da7845bd509591042a",
+      "assets/shared/fonts/NotoSansSC-Subset.ttf": "011c4e2acea4f1bb7af2465d154d2430eee1d053cf25aefe8acf7e2feed5b376",
       "assets/shared/fonts/NotoSansSC-Subset.ttf.import": "ea49fcc914ce4d4158fb5621af2cb5259d36ab3330b5443108adaa1c850105f2",
       "assets/shared/fonts/title_font.tres": "2197a89ee60f3b22477e320f3a6342cf38ff9243ca74c21f081ea9ca52ae1c34",
       "assets/shared/fonts/ui_font.tres": "5b1e9f8501a1cd2d43d0b01821cbf1c524fedd156ad6fff7461cc842654c9111",
@@ -3295,9 +3295,9 @@
       "scripts/ui/web_number_input.gd": "a2fe34800520b636776eb7f8d40ce0e36060a107724ad78942226d476c87ea60",
       "scripts/ui/web_number_input.gd.uid": "edbed077bb47e76e10c4566c29fecd8439a6e5ed8294e2f7bfd8126e9384e104"
     },
-    "source_sha256": "1aa6dcbbc5f511c453a829439d21477a3da901a715eb89cfd95dd4cbc62bb5e6",
+    "source_sha256": "4908be3caf805dcb254202a0720794e9da114e8310ea2551794b5816ec9260fb",
     "dirty_status": ""
   },
-  "artifact": "D:\\Godot\\project\\battle-tendency\\dev\\local\\main-release\\dev\\local\\releases\\main\\542bd8223a204642b8cf0ff050085219.zip",
-  "artifact_sha256": "301cc63005c10b6d40320098415c1da8e229ca524f3c03379f7c08379c0ffc9a"
+  "artifact": "D:\\Godot\\project\\battle-tendency\\dev\\local\\main-release\\dev\\local\\releases\\main\\4c67dcc52e444dd687a254c889c16540.zip",
+  "artifact_sha256": "d9f8e29a311e469761840b47b371adac577073f7c5cc810ccd70368b71f07cd4"
 }
