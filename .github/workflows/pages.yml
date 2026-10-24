@@ -35,7 +35,7 @@ jobs:
           chunks = sorted(chunks_dir.glob("*.part"))
           if not chunks:
               raise SystemExit("No split main PCK chunks found")
-          target = Path("web/bt-11871da8eff12415c12b.pck")
+          target = Path("web/bt-be29ae6ac57c0a5059bd.pck")
           with target.open("wb") as out:
               for chunk in chunks:
                   with chunk.open("rb") as src:
