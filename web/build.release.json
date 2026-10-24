@@ -5,7 +5,7 @@
     "branch": "main",
     "root": "D:\\Godot\\project\\battle-tendency\\dev\\local\\main-release",
     "version": "main",
-    "head": "1fcba4765b76122ffc06974c850df022c6ebe320",
+    "head": "8515a754e4cf30913591778fc0c0f85482845f90",
     "files": {
       "assets/characters/abdul/crossfire.mp3": "cfe28da3a9c9f4d6d97472c492b82020ca71a002de63654f0a27cb6620dad152",
       "assets/characters/abdul/crossfire.mp3.import": "4b9643c9f02fc8e4a22bbb5efa92848c2db294f8f3f11acdcea54c4701f4e329",
@@ -1748,7 +1748,7 @@
       "dev/tools/build_kars_scene.gd.uid": "3af25de0e50fab7dfd89860fb38bdf20ebcafbfbd862e3ef68556d779e748f70",
       "dev/tools/build_kars_uv_scene.gd": "a4b9811dbb1132273eb7625b12f7fdacfd57dc1956896041bfca6eb502ac110a",
       "dev/tools/build_kars_uv_scene.gd.uid": "deb68b8c51069d4817db24ff3251fe91d73cad7f1b51f9f86a5a8359e84826b5",
-      "dev/tools/build_main_release.py": "413428966bf15cfad27947e69a748468389fae9f22ff329f72e550ee99242f1f",
+      "dev/tools/build_main_release.py": "c8958269b4b6a248e4ca27f8bd503b87b339421d28ff847056286a7775d445ea",
       "dev/tools/build_mobile_performance_test.py": "944077457a6896c3c73ba29690e3d7c33ebc31aa38816f36c50d7b026c25cb36",
       "dev/tools/build_project_icon.py": "d523b52257587c9b3f6a1b5e245aff0a892689aac5f0259b3b98cf892a5f6dc6",
       "dev/tools/build_shared_presentation_diagnostic.py": "76264ac57ca2ea04ea97b7a2ef246f6fc40e8970787d8caf08f18bd60d1269e9",
@@ -3295,9 +3295,9 @@
       "scripts/ui/web_number_input.gd": "a2fe34800520b636776eb7f8d40ce0e36060a107724ad78942226d476c87ea60",
       "scripts/ui/web_number_input.gd.uid": "edbed077bb47e76e10c4566c29fecd8439a6e5ed8294e2f7bfd8126e9384e104"
     },
-    "source_sha256": "f6122a6c33ef956e75a8efd56622728763e53532e939770578aa2b2e75be3363",
+    "source_sha256": "1aa6dcbbc5f511c453a829439d21477a3da901a715eb89cfd95dd4cbc62bb5e6",
     "dirty_status": ""
   },
-  "artifact": "D:\\Godot\\project\\battle-tendency\\dev\\local\\main-release\\dev\\local\\releases\\main\\099fc0aac78c4a27b69810bcf4bca611.zip",
-  "artifact_sha256": "e5a27abb32d31e1f54d12ab670392c647d01fa5ccb96e3dde34e300fda83e382"
+  "artifact": "D:\\Godot\\project\\battle-tendency\\dev\\local\\main-release\\dev\\local\\releases\\main\\542bd8223a204642b8cf0ff050085219.zip",
+  "artifact_sha256": "301cc63005c10b6d40320098415c1da8e229ca524f3c03379f7c08379c0ffc9a"
 }
