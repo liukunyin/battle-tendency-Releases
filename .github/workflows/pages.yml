@@ -27,6 +27,24 @@ jobs:
           test -f web/index.html
           test -f web/sw.js
           test -f web/packs/manifest.json
+      - name: Assemble split main PCK
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          chunks_dir = Path("web/.main-pck-chunks")
+          chunks = sorted(chunks_dir.glob("*.part"))
+          if not chunks:
+              raise SystemExit("No split main PCK chunks found")
+          target = Path("web/bt-11871da8eff12415c12b.pck")
+          with target.open("wb") as out:
+              for chunk in chunks:
+                  with chunk.open("rb") as src:
+                      while data := src.read(1024 * 1024):
+                          out.write(data)
+          for chunk in chunks:
+              chunk.unlink()
+          chunks_dir.rmdir()
+          PY
       - uses: actions/upload-pages-artifact@v4
         with:
           path: web

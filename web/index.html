@@ -131,12 +131,118 @@ window.battleTendencyCacheReady = Promise.race([
     new Promise(resolve => setTimeout(resolve, 10000)),
 ]);
 
+// Mobile number fields for Godot Web. Shared by the main Web and Toy builds.
+// A real DOM input receives the tap itself, so mobile browsers open the keyboard;
+// Godot only reports the field layout and receives the typed value.
+(() => {
+    const style = document.createElement('style');
+    style.textContent = `.web-number-input{position:fixed;z-index:4;box-sizing:border-box;margin:0;padding:0 4px;border-radius:3px;border-style:solid;outline:none;text-align:center;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:700;font-variant-numeric:tabular-nums;-webkit-appearance:none;appearance:none;touch-action:manipulation}`;
+    document.head.appendChild(style);
+    const inputs = new Map();
+    let blocked = false, frozen = null, shift = 0, thawTimer = 0;
+
+    function place(item) {
+        const canvas = document.getElementById('canvas');
+        if (!canvas) return;
+        const rect = canvas.getBoundingClientRect(), p = item.data, n = item.node, s = n.style;
+        const focused = document.activeElement === n;
+        const shown = (p.visible || focused) && !blocked;
+        s.display = shown ? 'block' : 'none';
+        if (!shown) { if (focused) n.blur(); return; }
+        s.left = rect.left + p.x * rect.width + 'px'; s.top = rect.top + p.y * rect.height + 'px';
+        s.width = p.w * rect.width + 'px'; s.height = p.h * rect.height + 'px';
+        s.fontSize = p.font * rect.height + 'px'; s.color = p.color;
+        s.background = p.bg; s.borderColor = focused ? p.focusBorder : p.border;
+        s.borderWidth = Math.max(1, p.borderWidth * rect.height) + 'px';
+        s.clipPath = `inset(${p.clip.map((v, i) => v * (i % 2 ? rect.width : rect.height) + 'px').join(' ')})`;
+        if (!focused && n.value !== p.text) n.value = p.text;
+    }
+    const placeAll = () => inputs.forEach(place);
+
+    // The soft keyboard shrinks the window and Godot would relayout to it. While a
+    // field is edited, Godot keeps reading the pre-keyboard size and the canvas
+    // only slides up far enough to keep that field above the keyboard.
+    function freeze() {
+        clearTimeout(thawTimer);
+        if (frozen) return;
+        frozen = {};
+        for (const key of ['innerWidth', 'innerHeight']) {
+            const value = window[key], own = Object.getOwnPropertyDescriptor(window, key);
+            try { Object.defineProperty(window, key, {configurable: true, get: () => value}); frozen[key] = own || null; }
+            catch (_) {}
+        }
+    }
+    function thaw() {
+        clearTimeout(thawTimer);
+        if (!frozen) return;
+        for (const key of Object.keys(frozen)) {
+            if (frozen[key]) Object.defineProperty(window, key, frozen[key]); else delete window[key];
+        }
+        frozen = null; setShift(0);
+    }
+    function setShift(next) {
+        const canvas = document.getElementById('canvas');
+        if (!canvas || next === shift) return;
+        shift = next; canvas.style.transform = shift ? `translateY(${-shift}px)` : '';
+        placeAll();
+        // DOM overlays positioned from the canvas rect (e.g. Toy system text) follow.
+        window.dispatchEvent(new Event('webcanvasshift'));
+    }
+    const editing = () => document.activeElement?.classList.contains('web-number-input');
+    function keepVisible() {
+        if (!frozen || !editing()) return;
+        if (window.scrollY || window.scrollX) window.scrollTo(0, 0);
+        const view = window.visualViewport;
+        const bottom = view ? view.offsetTop + view.height : window.innerHeight;
+        const base = document.activeElement.getBoundingClientRect().bottom + shift;
+        setShift(Math.max(0, Math.round(base + 12 - bottom)));
+    }
+    window.visualViewport?.addEventListener('resize', keepVisible);
+    window.visualViewport?.addEventListener('scroll', keepVisible);
+    window.addEventListener('resize', () => { keepVisible(); placeAll(); });
+
+    window.webNumberInput = {
+        set(id, json, cb) {
+            let item = inputs.get(id);
+            if (!item) {
+                const node = document.createElement('input');
+                node.className = 'web-number-input';
+                node.type = 'text'; node.inputMode = 'decimal'; node.autocomplete = 'off'; node.spellcheck = false;
+                item = {node, cb};
+                node.addEventListener('pointerdown', freeze);
+                node.addEventListener('focus', () => { freeze(); node.value = item.data.edit; node.select(); place(item); keepVisible(); });
+                node.addEventListener('input', () => item.cb?.('input', node.value));
+                node.addEventListener('blur', () => {
+                    item.cb?.('commit', node.value); place(item);
+                    // Wait for the keyboard to close so Godot never sees the shrunken size.
+                    clearTimeout(thawTimer);
+                    thawTimer = setTimeout(() => { if (!editing()) thaw(); }, 600);
+                });
+                node.addEventListener('keydown', e => { if (e.key === 'Enter') node.blur(); e.stopPropagation(); });
+                node.addEventListener('keyup', e => e.stopPropagation());
+                inputs.set(id, item); document.body.appendChild(node);
+            }
+            if (cb) item.cb = cb;
+            item.data = JSON.parse(json);
+            place(item);
+        },
+        remove(id) {
+            const item = inputs.get(id);
+            if (!item) return;
+            item.cb = null; item.node.remove(); inputs.delete(id);
+            if (!inputs.size) thaw();
+        },
+        // HTML dialogs drawn above the canvas hide the fields underneath them.
+        setBlocked(value) { blocked = !!value; placeAll(); }
+    };
+})();
+
 </script>
-		<script src="bt-b2a194cfba49f0bbcb26.js"></script>
+		<script src="bt-11871da8eff12415c12b.js"></script>
 		<script>
 (async () => {
 await window.battleTendencyCacheReady;
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"bt-b2a194cfba49f0bbcb26","experimentalVK":false,"fileSizes":{"bt-b2a194cfba49f0bbcb26.pck":72761600,"bt-b2a194cfba49f0bbcb26.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"bt-11871da8eff12415c12b","experimentalVK":true,"fileSizes":{"bt-11871da8eff12415c12b.pck":72852912,"bt-11871da8eff12415c12b.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
