@@ -8,7 +8,7 @@
 
 挑选你喜欢的角色，让他们在同一座擂台上交手。观看自动对战、安排队伍和连战，或在「碰撞时机」模式中亲自决定角色的反弹方向。
 
-当前版本 **0.3**，共 **64 名角色**，包含《JOJO的奇妙冒险》《Fate/Grand Order》《超时空辉夜姬！》等作品中的角色。
+当前版本 **0.4**，共 **67 名角色**，包含《JOJO的奇妙冒险》《咒术回战》《Fate/Grand Order》《超时空辉夜姬！》等作品中的角色。
 
 ### 玩法
 
@@ -29,14 +29,13 @@
 
 进入游戏后选择模式、配置对局并挑选角色。首次在网页使用某些角色时，需要等待资源下载完成。
 
-### 0.3 更新亮点
+### 0.4 更新亮点
 
-- **新增 9 名角色**：库·丘林、开膛手杰克、喀耳刻、迦尔纳、山之翁、胖重、卡兹、贝西、月见八千代。
-- **新增碰撞时机模式**，加入开战前部署和碰撞后的方向选择。
-- **界面与战斗画面焕新**：新标志、配色与字体，2.5D 立体擂台，以及逐次命中的伤害数字。
-- **角色列表与对战历史重新排版**，新增网页试玩，修复网页文字乱码和画面模糊问题。
+- **新增 3 名角色**：五条悟、乔纳森·乔斯达、岸边露伴。
+- **BT 手动放技能**：每个技能可单独切换自动／手动，普攻仍然自动。
+- **角色配置页翻新**：分类调整数值、恢复默认，并保存配置模板。
 
-[查看完整更新介绍](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.3)
+[查看完整更新介绍](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.4)
 
 Android 更新时请直接覆盖安装，保留原有历史记录。网页版更新后若仍显示旧内容，请关闭游戏标签页后重新打开。
 
@@ -46,7 +45,7 @@ Android 更新时请直接覆盖安装，保留原有历史记录。网页版更
 
 Choose your favorite fighters and bring them into the same arena. Watch automatic battles, build teams and gauntlets, or steer your fighter's rebounds yourself in **Bounce Timing** mode.
 
-Version **0.3** features **64 fighters**, including characters from *JoJo's Bizarre Adventure*, *Fate/Grand Order*, *Cosmic Princess Kaguya!*, and other series.
+Version **0.4** features **67 fighters**, including characters from *JoJo's Bizarre Adventure*, *Jujutsu Kaisen*, *Fate/Grand Order*, *Cosmic Princess Kaguya!*, and other series.
 
 ### Game modes
 
@@ -67,13 +66,12 @@ Version **0.3** features **64 fighters**, including characters from *JoJo's Biza
 
 Choose a mode, set up your match, and pick your fighters. On Web, some fighters need to finish downloading the first time you use them.
 
-### What's new in 0.3
+### What's new in 0.4
 
-- **9 new fighters**: Cú Chulainn, Jack the Ripper, Circe, Karna, King Hassan, Shigechi, Kars, Pesci, and Yachiyo Runami.
-- **New Bounce Timing mode**, with pre-battle deployment and rebound aiming.
-- **Refreshed menus and battle visuals**: A new logo, colors and fonts, a raised 2.5D arena, and damage numbers for individual hits.
-- **Redesigned character selection and battle history**, plus browser play with fixes for garbled text and blurry visuals.
+- **3 new fighters**: Satoru Gojo, Jonathan Joestar and Rohan Kishibe.
+- **Manual skills in BT**: Switch each skill between automatic and manual; basic attacks stay automatic.
+- **Reworked character configuration**: Grouped settings, reset controls and saved presets.
 
-[Read the full release notes](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.3)
+[Read the full release notes](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.4)
 
 On Android, install updates over your existing installation to keep your battle history. If the Web version still shows older content after an update, close the game tabs and reopen the site.
