@@ -1,9 +1,6 @@
 {
-  "version": "0.4",
-  "source_head": "2ddfc45cdccec6fd966b6efd2e4c5cc0f2b0a79f",
-  "source_sha256": "1f184e2ea3eabb6575187699b17422f3acc43488f28b70dbbf3a3be25240ca20",
-  "base_build_sha256": "a429d9c39e1b1ff6648b5ad43c881d310aac4ec375deda7e14c250b364c97e70",
-  "deployment_changes": [
-    "enable existing force-update cache option"
-  ]
+  "source_head": "ca018bf81ab1354cc1f2ffd6746053602f3dc049",
+  "source_sha256": "88075cc01280cce83fb3e3fd7611efb22f4770dbd4c015c823cb8711de70d541",
+  "artifact_sha256": "60745bc29c34aac5b2f0b17dc7bd3de2e6ebf79af41d30f85352de945bd2a476",
+  "cache_version": "4735fcdb185e4251204b"
 }

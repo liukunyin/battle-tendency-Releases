@@ -237,12 +237,40 @@ window.battleTendencyCacheReady = Promise.race([
     };
 })();
 
+// Shared startup byte formatting. Counts decoded resource bytes, including cache reads.
+(function () {
+    window.battleTendencyFormatResourceBytes = function (current, total, pattern) {
+        if (!Number.isFinite(current) || !Number.isFinite(total) || total <= 0) return '';
+        const loaded = Math.min(total, Math.max(0, current));
+        return (pattern || '{loaded} MB / {total} MB')
+            .replace('{loaded}', (loaded / 1000000).toFixed(1))
+            .replace('{total}', (total / 1000000).toFixed(1));
+    };
+    window.battleTendencyShowResourceBytes = function (current, total, pattern) {
+        const overlay = document.getElementById('status');
+        if (!overlay) return;
+        let line = document.getElementById('status-resource-bytes');
+        if (!line) {
+            line = document.createElement('div');
+            line.id = 'status-resource-bytes';
+            line.setAttribute('role', 'status');
+            line.style.cssText = 'position:absolute;left:16px;right:16px;bottom:calc(10% + 24px);text-align:center;color:#e0e0e0;font:14px/1.4 Arial,sans-serif;font-variant-numeric:tabular-nums;pointer-events:none;z-index:2';
+            overlay.appendChild(line);
+        }
+        const text = window.battleTendencyFormatResourceBytes(current, total, pattern);
+        line.textContent = text;
+        line.style.display = text ? 'block' : 'none';
+    };
+}());
+
+const BT_WEB_RESOURCE_BYTES_TEXT = {"zh": "{loaded} MB / {total} MB", "en": "{loaded} MB / {total} MB"};
+
 </script>
-		<script src="bt-0db086e8878926b219bd.js"></script>
+		<script src="bt-b662b81f7ebaec257204.js"></script>
 		<script>
 (async () => {
 await window.battleTendencyCacheReady;
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"bt-0db086e8878926b219bd","experimentalVK":true,"fileSizes":{"bt-0db086e8878926b219bd.pck":95038636,"bt-0db086e8878926b219bd.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"bt-b662b81f7ebaec257204","experimentalVK":true,"fileSizes":{"bt-b662b81f7ebaec257204.pck":99338112,"bt-b662b81f7ebaec257204.wasm":53317798,"index.js":306458,"index.audio.worklet.js":7298,"index.audio.position.worklet.js":2973},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -332,6 +360,7 @@ const engine = new Engine(GODOT_CONFIG);
 		setStatusMode('progress');
 		engine.startGame({
 			'onProgress': function (current, total) {
+                window.battleTendencyShowResourceBytes(current, total, BT_WEB_RESOURCE_BYTES_TEXT[/^zh/i.test(navigator.language || '') ? 'zh' : 'en']);
 				if (current > 0 && total > 0) {
 					statusProgress.value = current;
 					statusProgress.max = total;
