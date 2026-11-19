@@ -1,4 +1,4 @@
-const BUILD = {"version": "b1e3e04d0c4c35a1dc7f", "startup": ["bt-863aa06571f67f299854.audio.position.worklet.js", "bt-863aa06571f67f299854.audio.worklet.js", "bt-863aa06571f67f299854.js", "bt-863aa06571f67f299854.pck", "bt-863aa06571f67f299854.wasm", "index.apple-touch-icon.png", "index.html", "index.icon.png", "index.png"], "packs": ["packs/abdul-004af3a898ccf97d.pck", "packs/alice_kuonji-20debed0192356eb.pck", "packs/altera-a698eb62c8d8c8e4.pck", "packs/anasui-b13ee0fe7ad5b7ac.pck", "packs/anubis-05c6856c5891f662.pck", "packs/artoria_pendragon-005bcdc3861b7825.pck", "packs/blackmore-bdeeb8018f889247.pck", "packs/bucciarati-fcf31234ea5e2a6f.pck", "packs/caveman-42078aae3a75f7f0.pck", "packs/circe-4ad6c56301d9759a.pck", "packs/cu_chulainn-7b0fef009548f1e5.pck", "packs/danmaku_streamer-b6e9c588b37f1012.pck", "packs/diego-663939c5b514aecf.pck", "packs/diego_parallel-e57e85e3dcca0bb0.pck", "packs/dio_part1-297fdb8a5d4d3cdf.pck", "packs/doppio_diavolo-8cf08f1f785bdda8.pck", "packs/emiya-7574b21f53600a91.pck", "packs/enkidu-2e18c65267758a27.pck", "packs/ermes-1ed9e1826d3c9583.pck", "packs/gilgamesh-acfc5e00bd8c986f.pck", "packs/giorno-bfcb8671def3eea3.pck", "packs/gojo-1120bfb18d775855.pck", "packs/gyro-28d6f915223628c6.pck", "packs/hassan_cursed_arm-5395aa4d45e75b22.pck", "packs/heracles-82fc1a442280065e.pck", "packs/iggy-a323bf4f6c6115e4.pck", "packs/jack_the_ripper-4416ba0d9fce7c09.pck", "packs/jeanne_d_arc-9deaf87099e6a8ba.pck", "packs/johnny-ea7ee218848a5de4.pck", "packs/jolyne-cf7a42028d34a3bc.pck", "packs/jonathan-6fe7cf87f575ec98.pck", "packs/joseph-ca83c886fe6e2f7e.pck", "packs/joseph_part2-2cecfcbb7a41eb79.pck", "packs/jotaro-d1be4be0c11277ad.pck", "packs/jotaro_part4-b1c812ca0c7472e4.pck", "packs/jotaro_part6-efb0c357e8116369.pck", "packs/kakyoin-f49dbb9d4411da80.pck", "packs/karna-4db1c27ce8cadd87.pck", "packs/kars-7022f6536c3d1ee2.pck", "packs/kawajiri-664ae4e9ef0b1853.pck", "packs/king_hassan-3317e0ac3f174cd0.pck", "packs/kira-ddf2f8385c3e1a84.pck", "packs/kiyohime-98d928937f245fda.pck", "packs/koichi-d66948b0fdf34ca5.pck", "packs/makima-bc23d83229ab29f6.pck", "packs/mash_kyrielight-969b41476d036288.pck", "packs/mista-e4d97f9560a58d02.pck", "packs/morgan-c1ae74913823e94d.pck", "packs/narancia-bf0bec48f9e7ee5c.pck", "packs/nero_claudius-02b1bba023f7a2b6.pck", "packs/okuyasu-dcb6f102b2685215.pck", "packs/olga-e40bc1069134a833.pck", "packs/ozymandias-0c3d62963e07d90b.pck", "packs/polnareff-080722fbb892b6c8.pck", "packs/pucci-a40a7dce0224da5d.pck", "packs/risotto-8905282f889b87aa.pck", "packs/rohan-437d0048c5541def.pck", "packs/scathach-ce117f60e9fc09dc.pck", "packs/shigechi-6e0555ebb931f7dc.pck", "packs/sisyphus-38979e063dd87458.pck", "packs/sukuna-a1c138e732d0d8d7.pck", "packs/tamamo_no_mae-965b6809bb7de3af.pck", "packs/tesla-f7a04681ec84e060.pck", "packs/trish-2bdbe62f24a975fc.pck", "packs/valentine-da443feadea0fd83.pck", "packs/vanilla_ice-aee5f8fb6bcc8825.pck", "packs/weather_report-cccef12c9a2c380e.pck"], "shell": ["bt-863aa06571f67f299854.audio.position.worklet.js", "bt-863aa06571f67f299854.audio.worklet.js", "bt-863aa06571f67f299854.js", "index.apple-touch-icon.png", "index.html", "index.icon.png", "index.png"], "forceUpdate": true};
+const BUILD = {"version": "3d3ed27e1e837bb0075c", "startup": ["bt-c01e40d583515641180b.audio.position.worklet.js", "bt-c01e40d583515641180b.audio.worklet.js", "bt-c01e40d583515641180b.js", "bt-c01e40d583515641180b.pck", "bt-c01e40d583515641180b.wasm", "index.apple-touch-icon.png", "index.html", "index.icon.png", "index.png"], "packs": ["packs/abdul-004af3a898ccf97d.pck", "packs/alice_kuonji-20debed0192356eb.pck", "packs/altera-a698eb62c8d8c8e4.pck", "packs/anasui-b13ee0fe7ad5b7ac.pck", "packs/anubis-05c6856c5891f662.pck", "packs/artoria_pendragon-005bcdc3861b7825.pck", "packs/blackmore-bdeeb8018f889247.pck", "packs/bucciarati-fcf31234ea5e2a6f.pck", "packs/caveman-42078aae3a75f7f0.pck", "packs/circe-4ad6c56301d9759a.pck", "packs/cu_chulainn-7b0fef009548f1e5.pck", "packs/danmaku_streamer-b6e9c588b37f1012.pck", "packs/diego-663939c5b514aecf.pck", "packs/diego_parallel-e57e85e3dcca0bb0.pck", "packs/dio_part1-297fdb8a5d4d3cdf.pck", "packs/doppio_diavolo-8cf08f1f785bdda8.pck", "packs/emiya-7574b21f53600a91.pck", "packs/enkidu-2e18c65267758a27.pck", "packs/ermes-1ed9e1826d3c9583.pck", "packs/gilgamesh-acfc5e00bd8c986f.pck", "packs/giorno-bfcb8671def3eea3.pck", "packs/gojo-1120bfb18d775855.pck", "packs/gyro-28d6f915223628c6.pck", "packs/hassan_cursed_arm-5395aa4d45e75b22.pck", "packs/heracles-82fc1a442280065e.pck", "packs/iggy-a323bf4f6c6115e4.pck", "packs/jack_the_ripper-4416ba0d9fce7c09.pck", "packs/jeanne_d_arc-9deaf87099e6a8ba.pck", "packs/johnny-ea7ee218848a5de4.pck", "packs/jolyne-cf7a42028d34a3bc.pck", "packs/jonathan-6fe7cf87f575ec98.pck", "packs/joseph-ca83c886fe6e2f7e.pck", "packs/joseph_part2-2cecfcbb7a41eb79.pck", "packs/jotaro-d1be4be0c11277ad.pck", "packs/jotaro_part4-b1c812ca0c7472e4.pck", "packs/jotaro_part6-efb0c357e8116369.pck", "packs/kakyoin-f49dbb9d4411da80.pck", "packs/karna-4db1c27ce8cadd87.pck", "packs/kars-7022f6536c3d1ee2.pck", "packs/kawajiri-664ae4e9ef0b1853.pck", "packs/king_hassan-3317e0ac3f174cd0.pck", "packs/kira-ddf2f8385c3e1a84.pck", "packs/kiyohime-98d928937f245fda.pck", "packs/koichi-d66948b0fdf34ca5.pck", "packs/makima-bc23d83229ab29f6.pck", "packs/mash_kyrielight-969b41476d036288.pck", "packs/mista-e4d97f9560a58d02.pck", "packs/morgan-c1ae74913823e94d.pck", "packs/narancia-bf0bec48f9e7ee5c.pck", "packs/nero_claudius-02b1bba023f7a2b6.pck", "packs/okuyasu-dcb6f102b2685215.pck", "packs/olga-e40bc1069134a833.pck", "packs/ozymandias-0c3d62963e07d90b.pck", "packs/polnareff-080722fbb892b6c8.pck", "packs/pucci-a40a7dce0224da5d.pck", "packs/risotto-8905282f889b87aa.pck", "packs/rohan-437d0048c5541def.pck", "packs/scathach-ce117f60e9fc09dc.pck", "packs/shigechi-6e0555ebb931f7dc.pck", "packs/sisyphus-38979e063dd87458.pck", "packs/sukuna-a1c138e732d0d8d7.pck", "packs/tamamo_no_mae-965b6809bb7de3af.pck", "packs/tesla-f7a04681ec84e060.pck", "packs/trish-2bdbe62f24a975fc.pck", "packs/valentine-da443feadea0fd83.pck", "packs/vanilla_ice-aee5f8fb6bcc8825.pck", "packs/weather_report-cccef12c9a2c380e.pck"], "shell": ["bt-c01e40d583515641180b.audio.position.worklet.js", "bt-c01e40d583515641180b.audio.worklet.js", "bt-c01e40d583515641180b.js", "index.apple-touch-icon.png", "index.html", "index.icon.png", "index.png"], "forceUpdate": true};
 /* Build configuration is prepended by build_web_cache.py. */
 const scopeURL = new URL(self.registration.scope);
 const prefix = 'bt-web-' + encodeURIComponent(scopeURL.pathname) + '-';
@@ -78,7 +78,8 @@ self.addEventListener('activate', event => {
     })());
 });
 
-async function cachedResponse(request, key, cacheName) {
+async function cachedResponse(event, key, cacheName) {
+    const request = event.request;
     let cache, cached;
     try {
         cache = await caches.open(cacheName);
@@ -89,8 +90,10 @@ async function cachedResponse(request, key, cacheName) {
     if (cached) return decodedPackResponse(cached, cacheName);
     const response = await fetch(request);
     if (response.status === 200 && response.type !== 'opaque') {
-        try { await cache.put(key, response.clone()); }
-        catch (error) { console.warn('Game resource cache write failed:', error); }
+        // Stream bytes to Godot while the worker stores its copy.
+        event.waitUntil(cache.put(key, response.clone()).catch(error => {
+            console.warn('Game resource cache write failed:', error);
+        }));
     }
     return decodedPackResponse(response, cacheName);
 }
@@ -112,10 +115,10 @@ self.addEventListener('fetch', event => {
     if (url.origin !== scopeURL.origin) return;
     // Root and index.html use this worker's shell, so its engine and PCK agree.
     if (request.mode === 'navigate' && (url.pathname === scopeURL.pathname || url.pathname === new URL('index.html', scopeURL).pathname)) {
-        event.respondWith(cachedResponse(request, absolute('index.html'), startupCache));
+        event.respondWith(cachedResponse(event, absolute('index.html'), startupCache));
     } else if (startup.has(url.href)) {
-        event.respondWith(cachedResponse(request, url.href, startupCache));
+        event.respondWith(cachedResponse(event, url.href, startupCache));
     } else if (packs.has(url.href)) {
-        event.respondWith(cachedResponse(request, url.href, packCache));
+        event.respondWith(cachedResponse(event, url.href, packCache));
     }
 });

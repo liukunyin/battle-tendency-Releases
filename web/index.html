@@ -264,6 +264,7 @@ window.battleTendencyLoadingArt={"landscape": "data:image/webp;base64,UklGRg6hBA
 #status-progress {position:absolute!important;left:50%!important;right:auto!important;bottom:8%!important;transform:translateX(-50%);width:min(72vw,400px)!important;height:4px!important;border:0;border-radius:4px;overflow:hidden;background:#e7c66d18;appearance:none;accent-color:#e7c66d}
 #status-progress::-webkit-progress-bar {background:#e7c66d18;border-radius:4px}
 #status-progress::-webkit-progress-value {background:linear-gradient(90deg,#96702b,#f1d88c);border-radius:4px}
+#status[data-bt-waiting="true"][data-bt-stage="download"] #status-progress::-webkit-progress-value {background:linear-gradient(90deg,#96702b,#f1d88c,#96702b);background-size:200% 100%;animation:bt-flow 1.7s linear infinite}
 #status-progress::-moz-progress-bar {background:#e7c66d;border-radius:4px}
 #status[data-bt-stage="prepare"] #status-progress {background:linear-gradient(90deg,#e7c66d12 15%,#e7c66daa 50%,#e7c66d12 85%);background-size:200% 100%;animation:bt-flow 1.7s linear infinite}
 #status[data-bt-stage="prepare"] #status-progress::-webkit-progress-bar {background:transparent}
@@ -378,6 +379,7 @@ window.battleTendencyLoadingArt={"landscape": "data:image/webp;base64,UklGRg6hBA
             else if (bar.removeAttribute) bar.removeAttribute('value');
         }
     };
+    let lastCurrent = -1, lastTotal = -1, waitingTimer;
     window.battleTendencyShowResourceBytes = function (current, total, pattern) {
         window.battleTendencySetLoadStage(current >= total && total > 0 ? 'prepare' : 'download');
         const overlay = document.getElementById('status');
@@ -390,6 +392,21 @@ window.battleTendencyLoadingArt={"landscape": "data:image/webp;base64,UklGRg6hBA
             line.style.cssText = 'position:absolute;left:16px;right:16px;bottom:calc(10% + 24px);text-align:center;color:#e0e0e0;font:14px/1.4 Arial,sans-serif;font-variant-numeric:tabular-nums;pointer-events:none;z-index:2';
             overlay.appendChild(line);
         }
+        if (current !== lastCurrent || total !== lastTotal) {
+            lastCurrent = current;
+            lastTotal = total;
+            clearTimeout(waitingTimer);
+            delete overlay.dataset.btWaiting;
+            if (current < total && window.battleTendencyLoadStageText?.waiting) {
+                waitingTimer = setTimeout(() => {
+                    if (!overlay.isConnected || overlay.dataset.btStage !== 'download') return;
+                    overlay.dataset.btWaiting = 'true';
+                    document.getElementById('status-load-stage').textContent = window.battleTendencyLoadStageText.waiting;
+                }, 3000);
+            }
+        } else if (overlay.dataset.btWaiting && overlay.dataset.btStage === 'download') {
+            document.getElementById('status-load-stage').textContent = window.battleTendencyLoadStageText.waiting;
+        }
         const text = window.battleTendencyFormatResourceBytes(current, total, pattern);
         line.textContent = text;
         line.style.display = text && !(total > 0 && current >= total) ? 'block' : 'none';
@@ -398,14 +415,14 @@ window.battleTendencyLoadingArt={"landscape": "data:image/webp;base64,UklGRg6hBA
 
 const BT_WEB_RESOURCE_BYTES_TEXT = {"zh": "{loaded} MB / {total} MB", "en": "{loaded} MB / {total} MB"};
 
-window.battleTendencyLoadStageText = {"zh": {"download": "下载／读取缓存", "prepare": "资源解包／初始化中，请稍等", "unpack": "资源解包"}, "en": {"download": "Downloading / reading cache", "prepare": "Unpacking resources / initializing. Please wait", "unpack": "Unpacking resources"}}[/^zh/i.test(navigator.language || '') ? 'zh' : 'en'];
+window.battleTendencyLoadStageText = {"zh": {"download": "下载／读取缓存", "prepare": "资源解包／初始化中，请稍等", "unpack": "资源解包", "waiting": "正在等待下一段资源数据…"}, "en": {"download": "Downloading / reading cache", "prepare": "Unpacking resources / initializing. Please wait", "unpack": "Unpacking resources", "waiting": "Waiting for more resource data…"}}[/^zh/i.test(navigator.language || '') ? 'zh' : 'en'];
 
 </script>
-		<script src="bt-863aa06571f67f299854.js"></script>
+		<script src="bt-c01e40d583515641180b.js"></script>
 		<script>
 (async () => {
 await window.battleTendencyCacheReady;
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"bt-863aa06571f67f299854","experimentalVK":true,"fileSizes":{"bt-863aa06571f67f299854.pck":90532980,"bt-863aa06571f67f299854.wasm":53317798,"index.js":306458,"index.audio.worklet.js":7298,"index.audio.position.worklet.js":2973},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"bt-c01e40d583515641180b","experimentalVK":true,"fileSizes":{"bt-c01e40d583515641180b.pck":90533060,"bt-c01e40d583515641180b.wasm":53317798,"index.js":306458,"index.audio.worklet.js":7298,"index.audio.position.worklet.js":2973},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
