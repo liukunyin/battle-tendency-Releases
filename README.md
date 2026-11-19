@@ -8,7 +8,7 @@
 
 挑选你喜欢的角色，让他们在同一座擂台上交手。观看自动对战、安排队伍和连战，或在「碰撞时机」模式中亲自决定角色的反弹方向。
 
-当前版本 **0.4**，共 **67 名角色**，包含《JOJO的奇妙冒险》《咒术回战》《Fate/Grand Order》《超时空辉夜姬！》等作品中的角色。
+当前版本 **0.5**，共 **70 名角色**，包含《JOJO的奇妙冒险》《咒术回战》《Fate/Grand Order》《超时空辉夜姬！》等作品中的角色。
 
 ### 玩法
 
@@ -29,13 +29,13 @@
 
 进入游戏后选择模式、配置对局并挑选角色。首次在网页使用某些角色时，需要等待资源下载完成。
 
-### 0.4 更新亮点
+### 0.5 更新亮点
 
-- **新增 3 名角色**：五条悟、乔纳森·乔斯达、岸边露伴。
-- **BT 手动放技能**：每个技能可单独切换自动／手动，普攻仍然自动。
-- **角色配置页翻新**：分类调整数值、恢复默认，并保存配置模板。
+- 角色技能可以自由搭配，选技能时可直接查看效果。
+- 无尽之塔随机分配角色，开局自带一项角色技能，另外获得三项随机技能。
+- 新增迪奥（第一部）、宿傩和奥尔加。合并对战模式，并优化各场景的竖屏界面。
 
-[查看完整更新介绍](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.4)
+[查看完整更新介绍](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.5)
 
 Android 更新时请直接覆盖安装，保留原有历史记录。网页版更新后若仍显示旧内容，请关闭游戏标签页后重新打开。
 
@@ -45,7 +45,7 @@ Android 更新时请直接覆盖安装，保留原有历史记录。网页版更
 
 Choose your favorite fighters and bring them into the same arena. Watch automatic battles, build teams and gauntlets, or steer your fighter's rebounds yourself in **Bounce Timing** mode.
 
-Version **0.4** features **67 fighters**, including characters from *JoJo's Bizarre Adventure*, *Jujutsu Kaisen*, *Fate/Grand Order*, *Cosmic Princess Kaguya!*, and other series.
+Version **0.5** features **70 fighters**, including characters from *JoJo's Bizarre Adventure*, *Jujutsu Kaisen*, *Fate/Grand Order*, *Cosmic Princess Kaguya!*, and other series.
 
 ### Game modes
 
@@ -66,12 +66,12 @@ Version **0.4** features **67 fighters**, including characters from *JoJo's Biza
 
 Choose a mode, set up your match, and pick your fighters. On Web, some fighters need to finish downloading the first time you use them.
 
-### What's new in 0.4
+### What's new in 0.5
 
-- **3 new fighters**: Satoru Gojo, Jonathan Joestar and Rohan Kishibe.
-- **Manual skills in BT**: Switch each skill between automatic and manual; basic attacks stay automatic.
-- **Reworked character configuration**: Grouped settings, reset controls and saved presets.
+- Mix character skills and inspect their effects before battle.
+- In the Endless Tower, start with a random fighter, one of their own skills and three random skills.
+- Dio (Part 1), Sukuna and Orga join the roster. Battle modes share one setup screen, and portrait layouts have been updated throughout the game.
 
-[Read the full release notes](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.4)
+[Read the full release notes](https://github.com/liukunyin/battle-tendency-Releases/releases/tag/v0.5)
 
 On Android, install updates over your existing installation to keep your battle history. If the Web version still shows older content after an update, close the game tabs and reopen the site.
