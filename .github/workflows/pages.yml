@@ -78,6 +78,14 @@ jobs:
                   part.unlink()
           source.rmdir()
           assert hashlib.sha256(target.read_bytes()).hexdigest() == "a6c5d4c984b2a3d116363836f93a85078ff59f8e65b776c7a6355d41760e96f5"
+          source = Path("web/.pck-bt-81b190c18bfc61d09017")
+          target = Path("web/bt-81b190c18bfc61d09017.pck")
+          with target.open("wb") as out:
+              for part in sorted(source.glob("*.part")):
+                  out.write(part.read_bytes())
+                  part.unlink()
+          source.rmdir()
+          assert hashlib.sha256(target.read_bytes()).hexdigest() == "27d43477314956a7c312d9ff443e0da5646631c84745736bcf0a1429f5cbe6b0"
           PY
       - uses: actions/upload-pages-artifact@v4
         with:
