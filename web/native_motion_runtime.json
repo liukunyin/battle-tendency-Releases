@@ -4,8 +4,8 @@
   "godot_source_commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
   "emscripten": "4.0.10",
   "scons": "4.11.1",
-  "build_options": "platform=web target=template_release threads=no optimize=speed lto=thin",
-  "template_sha256": "b375af7b8771b28ce25eba9312a105dfa5c2aa67e207bb8fcbeec02a9ad4203b",
+  "build_options": "platform=web target=template_release threads=no optimize=speed lto=thin wasm_simd=no",
+  "template_sha256": "ca8e809624baeb4fc2d75fd0822c3f0517ef6c9b35533221cf78c949c944144e",
   "sources": {
     "battle_motion_batch.cpp": "e68202971202aab1dfa3519d7a271c6a151b5efdb5d5a72cf9059bcb7fcfe992",
     "battle_motion_batch.h": "09e0ed3c5f0ab268486b5848c37a762c9bee8ffd152be7ceb775c46e2f1c3bd3",
@@ -14,9 +14,10 @@
     "config.py": "5f174054eb0f382af05bc30389a71b4ebbf3a624681b3f433f1b875d8366f48b",
     "SCsub": "ecf2a2c89929b08202f25cd4ee672f8b5a30069fb00f682b6f5a4616709ba67a"
   },
+  "emscripten_support_longjmp": "emscripten",
   "runtime_files_before_platform_patches": {
-    "index.js": "1b3f1c32eb8a6d046d7f4753fac16b944f11f7b1a3cab7f3f28e1db1ae755612",
-    "index.wasm": "04f6ec1ea8ae55c61182205c93db5749fcb84d98c50bd15a6c35ba1c1a2c97e6",
+    "index.js": "eba62ed4b629419d2f5a7fac2855dfe1917db8c587be38e67d9325e51fa61a7f",
+    "index.wasm": "3f1db7a3cf54bb5d8f6f8fbc36bcb2c47ddaa53a49ee1f0b305d9ef7cc5fd0f8",
     "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
     "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
   }
