@@ -5,7 +5,7 @@
     "branch": "main",
     "root": "D:\\Godot\\project\\battle-tendency",
     "version": "main",
-    "head": "ab9a37e139bfd39759c1eaf24708b03cebd99d5f",
+    "head": "98dac9057c762f55a9ffe6bad871dcfc366fae06",
     "files": {
       "addons/art_resolution/plugin.gd": "02fda774b00b8c6cb437563367583eb2238264afc21d66e775db2162a86a31f3",
       "addons/art_resolution/plugin.gd.uid": "a37eec801318b329cd0f875872f84cafc6c535e28f9b9b35509228bdfafea708",
@@ -3051,7 +3051,7 @@
       "scenes/ui/battlefield_size_editor.tscn": "44fac5986cdacdcd6b8235d968149862f04865f0ae9a92da6887da0af961a63b",
       "scenes/ui/character_browser_toolbar.tscn": "5da07aea3d001317382582a7294a65d1265d5f1450986b7748bf38ba1b8f434e",
       "scenes/ui/character_preview.tscn": "5c697e1aafeecd9d3a299d145e05056fbad22cb4ab09927f6a0d8b5eb3ac03ef",
-      "scenes/ui/character_select.tscn": "5ae9b7c1bde6a65265f86a34c95b1911d208c8c260234f36103e0af1db9b487f",
+      "scenes/ui/character_select.tscn": "bd50ba32cac113c2ab827f074f3d7c4311d8c6187dcbbb634eaea65fa521144e",
       "scenes/ui/character_skill_picker.tscn": "92f47748296932be7b0716e16f28f1224eabb5fc9738d73a018f25a4da3cbf71",
       "scenes/ui/debug_menu.tscn": "ed0ac5a7a457a48fb768855f4ad02ee9373c0b4c6939981fe56e1b5efc555b47",
       "scenes/ui/endless_tower.tscn": "77e53bcea01038ea58e523740a77da298b42601a01d7d6f25008a1d2eecef67e",
@@ -4659,7 +4659,7 @@
       "scripts/ui/character_browser_toolbar.gd.uid": "2d5932822c65398a1f0fed4a9bfb506370d1dad23a61f848841d645dcaa57c27",
       "scripts/ui/character_preview.gd": "04285ce79a4046c63653161a2f453e441a81ef6af9fe0d6f2743162d9fa871de",
       "scripts/ui/character_preview.gd.uid": "e33adb71a31d1ad224db350a0de4b59e88ef899008649806d5e7976bac3067e8",
-      "scripts/ui/character_select.gd": "f08f7016641d6625b613d27adc19ec68cace6c25cbd88ee09cdafb191bfcbf8f",
+      "scripts/ui/character_select.gd": "58fe314a83e98f2b9d33ad320c9e621a5839bb47494be7f4ee71c64a91e0e39c",
       "scripts/ui/character_select.gd.uid": "167c9e9c7e48d232ef436181e6891ddf0981d31f8dbcf40b724dfd9d7d9ad7c1",
       "scripts/ui/character_skill_description_cycler.gd": "91c8d94fb3441d434c9760794bc21605242b75a92d18209968e358c8d3ac7a6d",
       "scripts/ui/character_skill_description_cycler.gd.uid": "3bece798e40e07138ed35789da1f02a2d1360ea17374030b2d67043df7ddcea2",
@@ -4752,9 +4752,9 @@
       "scripts/ui/web_number_input.gd": "a2fe34800520b636776eb7f8d40ce0e36060a107724ad78942226d476c87ea60",
       "scripts/ui/web_number_input.gd.uid": "edbed077bb47e76e10c4566c29fecd8439a6e5ed8294e2f7bfd8126e9384e104"
     },
-    "source_sha256": "aab17df7f13b0547f7ba9386b840dc38b871aa0732311a2b65378cb67ce0a741",
+    "source_sha256": "af716ac9cebc879c0a2b946e9591ac0eaac094d5aeb29f3fd92da4582421ae2e",
     "dirty_status": ""
   },
-  "artifact": "D:\\Godot\\project\\battle-tendency\\dev\\local\\releases\\main\\7b874063222545239007312311d6b671.zip",
-  "artifact_sha256": "2928a2f6ab8a50d315393b956d8c138b31a9470589de322654836091df658460"
+  "artifact": "D:\\Godot\\project\\battle-tendency\\dev\\local\\releases\\main\\d7578b1f33cd412c871b3e499f526cb4.zip",
+  "artifact_sha256": "54f8b2edddf9328555f5096ac13299f67a94619307c8353124e406a81438e787"
 }
